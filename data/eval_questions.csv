@@ -1,0 +1,61 @@
+qid,split,q_type,answerable,question,relevant_doc_ids,expected_answer,answer_keywords,absent_terms
+V01,validation,concept,1,What is overfitting?,PDS-004,"When a model fits its training data too closely, so it becomes overly specific and performs worse on new data (high variance).",overfitting|high variance,
+V02,validation,concept,1,What is the difference between supervised and unsupervised learning?,PDS-002,Supervised learning trains and tests on labeled data; unsupervised learning trains on unlabeled data to find patterns or groups.,unlabeled,
+V03,validation,concept,1,What does a confusion matrix show?,PDS-009;PDS-048,A table that breaks down a classifier's predictions into correct and incorrect classifications (true/false positives and negatives).,confusion matrix,
+V04,validation,concept,1,What is a random forest?,PDS-018;PDS-053,A classification method that combines many decision trees trained on resampled (bootstrapped) data and aggregates their predictions.,random forest,
+V05,validation,concept,1,What is backpropagation used for?,PDS-026;PDS-027,Training multilayer neural networks by working backward from the output error to update the weights and biases of every layer.,backpropagation,
+V06,validation,concept,1,What is data anonymization?,PDS-043,Removing personally identifiable information from data so it can still be analyzed without revealing individuals' identities.,anonymiz,
+V07,validation,paraphrase,1,Why might a model that scores perfectly on the examples it learned from do badly on new examples?,PDS-004,"It has overfit: it learned the training data too closely, including noise, so it does not generalize.",overfitting,
+V08,validation,paraphrase,1,How can I split customers into groups when I don't have any labels telling me which group they belong to?,PDS-007;PDS-002;FIS-085,"Use an unsupervised clustering method such as k-means, which groups similar data points without predefined categories.",cluster,
+V09,validation,paraphrase,1,What is the S-shaped curve that turns a score into a probability between 0 and 1 for yes/no predictions?,PDS-006,"The sigmoid function, used by logistic regression.",sigmoid,
+V10,validation,paraphrase,1,How can I check whether tiny changes in my inputs cause big swings in my model's output?,PDS-049,"Perform a sensitivity analysis: vary inputs slightly (e.g., up to 5%) and examine how the output changes.",sensitivity analysis,
+V11,validation,multi_passage,1,How do single decision trees and random forests compare when it comes to overfitting?,PDS-016;PDS-018;PDS-053,Single trees often overfit (high variance) and need pruning or depth limits; random forests combine many trees built on resampled data to reduce that problem.,overfitting|variance,
+V12,validation,multi_passage,1,"Which data privacy laws do the readings mention, and what does the GDPR cover?",FIS-095;FIS-092;FIS-091;ICS-066;ICS-067,"Laws such as GDPR, HIPAA, the Privacy Act, and the California Consumer Privacy Act; the GDPR is the EU law setting rules for collecting and processing personal data of people in the EU.",GDPR|General Data Protection,
+V13,validation,logistics,1,When is Assignment 2 due?,SYN-104,"Friday, October 30, 2026, at 11:59 PM Eastern Time.",October 30,
+V14,validation,logistics,1,How much of the final grade is the midterm exam worth?,SYN-107,20%.,Midterm exam 20%,
+V15,validation,logistics,1,Can I use a grace day on Assignment 2?,SYN-106,"No. Grace days cannot be used for Assignment 2, quizzes, or exams.",cannot be used for Assignment 2,
+V16,validation,unanswerable_out_of_scope,0,What is the capital of Australia?,,,,Canberra|capital of Australia
+V17,validation,unanswerable_near_miss,0,How does dropout help prevent overfitting in neural networks?,,,,dropout
+V18,validation,unanswerable_near_miss,0,What is a support vector machine?,,,,support vector|SVM
+V19,validation,unanswerable_logistics,0,When is Assignment 3 due?,,,,Assignment 3
+V20,validation,unanswerable_out_of_scope,0,Where can students park on campus?,,,,parking|park on
+T01,test,concept,1,What is the bias-variance trade-off?,PDS-004,"Models with low variance tend to have high bias and vice versa, so reducing one kind of error often increases the other.",bias-variance,
+T02,test,concept,1,What is a perceptron?,PDS-024;PDS-026,The simplest neural network: a single neuron that combines weighted inputs and a bias and applies a step function to output a binary decision.,perceptron,
+T03,test,concept,1,What is DBScan and when does it work better than k-means?,PDS-008,A density-based clustering algorithm that grows clusters from core points in dense regions; it handles shapes like rings where k-means does poorly.,DBScan,
+T04,test,concept,1,What is entropy in the context of decision trees?,PDS-014;PDS-015,"A measure of the amount of information or uncertainty; trees pick the split that maximizes information gain, i.e., minimizes entropy.",entropy,
+T05,test,concept,1,What is k-fold cross-validation?,PDS-047,"Splitting data into k equal folds, training on k-1 folds and testing on the remaining fold, repeated so each fold is the test set once.",k-fold,
+T06,test,concept,1,What does precision measure?,PDS-048;PDS-003,The share of predicted positives that are actually positive: true positives divided by all predicted positives.,precision,
+T07,test,concept,1,What are AI hallucinations?,PDS-040,"Responses generated by an LLM that have no basis: made-up answers that seem plausible but are incorrect, misleading, or lack context.",hallucination,
+T08,test,concept,1,What is a recurrent neural network?,PDS-028,"A neural network with feedback loops, where a neuron's output is fed back as input, which suits sequential data such as time series.",feedback loop|recurrent,
+T09,test,concept,1,What is a feature map in a convolutional neural network?,PDS-035;PDS-034;PDS-033,The output of applying a convolutional filter to the input: a 2-D array of activations showing where that filter's feature appears.,feature map,
+T10,test,concept,1,What is federated learning?,FIS-094,"Training a model across many decentralized devices or servers that keep their local data, without exchanging the raw data, to protect privacy.",federated learning,
+T11,test,concept,1,What is MapReduce?,ICS-068,"A two-step approach for processing very large datasets on clusters: Map distributes computation over slices of data in parallel, Reduce combines the results.",MapReduce,
+T12,test,concept,1,What is Gaussian naive Bayes?,PDS-020,"A variant of naive Bayes designed for continuous features, which models each feature with a normal (Gaussian) distribution.",Gaussian,
+T13,test,paraphrase,1,Why should I keep part of my data aside instead of using all of it to build the model?,PDS-001;PDS-003,So the held-out testing set can show whether the model is accurate on data it has not seen; typically 60-80% is used for training.,testing set|testing,
+T14,test,paraphrase,1,Why are networks that feed their own outputs back into themselves hard to train?,PDS-028,"Because they are very sensitive to the connecting weights, so gradients can vanish or explode during training.",gradient,
+T15,test,paraphrase,1,How can a chatbot confidently give an answer that is completely made up?,PDS-040,LLMs can hallucinate: generate plausible-sounding responses with no basis in fact.,hallucination,
+T16,test,paraphrase,1,How can I hide people's names and ID numbers in a dataset but still analyze it?,PDS-043,"Anonymize or pseudonymize the data by removing, masking, encoding, or encrypting identifying fields.",anonymiz|pseudonymiz,
+T17,test,paraphrase,1,Why is it hard to understand how a neural network reached its decision?,FIS-090;PDS-030,Complex networks are 'black boxes' whose decision logic is opaque; explainability techniques and documentation help.,explainab|black box|reporting reasons,
+T18,test,paraphrase,1,How does a tree-based model decide which question to ask first when splitting the data?,PDS-015,It chooses the feature whose split gives the greatest information gain (lowest entropy); the Gini index is an alternative.,information gain|entropy,
+T19,test,paraphrase,1,How can I tell whether my spam filter is letting too many spam emails through?,PDS-048,Look at recall (and the confusion matrix): the share of actual spam the model catches; low recall means much spam is missed.,recall,
+T20,test,paraphrase,1,Which method builds lots of trees from resampled data and lets them vote?,PDS-018;PDS-053,"A random forest, which uses bootstrap aggregating (bagging) of many decision trees.",random forest|bootstrap aggregating,
+T21,test,multi_passage,1,How do logistic regression and decision trees each make classification decisions?,PDS-006;PDS-015,Logistic regression fits a sigmoid to output a probability of yes/no; a decision tree splits the data feature by feature using information gain until reaching a label.,sigmoid|decision tree,
+T22,test,multi_passage,1,"What ethical risks do AI models create, both from biased training data and from a lack of transparency?",PDS-042;FIS-090,"Biased or unrepresentative data can produce unfair outcomes, and opaque 'black box' models make decisions hard to explain or audit.",bias,
+T23,test,multi_passage,1,How is a loss function used when a neural network is trained with backpropagation?,PDS-027;PDS-031,"The loss function (e.g., MSE or cross entropy) measures prediction error; backpropagation uses gradients of that loss to update weights and biases.",loss function,
+T24,test,multi_passage,1,What do the readings say about handling big data for machine learning?,PDS-021;ICS-065;ICS-066;ICS-067;ICS-068,"Big data is described by the five Vs and needs distributed tools such as Hadoop, MapReduce, and Spark; some algorithms scale better than others.",big data,
+T25,test,logistics,1,Who teaches DSAI 3150 and when are the instructor's office hours?,SYN-107,"Dr. Maya Okafor; Wednesdays 1:00-3:00 PM in Room 330, or by appointment over video call.",Okafor,
+T26,test,logistics,1,Is the final exam cumulative?,SYN-105,"Yes. It covers all topics, with about 60% on material after the midterm.",cumulative,
+T27,test,logistics,1,How many days late can I turn in homework?,SYN-106,"Up to three days, losing 10% per day; after three days the score is zero.",three days,
+T28,test,logistics,1,What files do I need to submit for Assignment 2?,SYN-104,A notebook that runs top to bottom without errors and a PDF report of at most four pages.,notebook,
+T29,test,logistics,1,Am I allowed to use AI tools for Assignment 2?,SYN-104;SYN-106,"Only to explain concepts or error messages; AI-generated code or text may not be submitted, and any AI use must be disclosed.",AI tools,
+T30,test,logistics,1,When is the midterm exam?,SYN-107,"Thursday, October 15, 2026 (Week 8).",October 15,
+T31,test,logistics,1,How do I ask for a regrade?,SYN-105,"Email the TA in writing within seven days after grades are released, explaining which question and why.",seven days,
+T32,test,unanswerable_out_of_scope,0,What's the best pizza place near campus?,,,,pizza place|near campus
+T33,test,unanswerable_out_of_scope,0,Who won the 2022 FIFA World Cup?,,,,World Cup|FIFA
+T34,test,unanswerable_near_miss,0,How do I compute the area under the ROC curve?,,,,ROC|AUC|area under the curve
+T35,test,unanswerable_near_miss,0,What is gradient boosting and how does XGBoost work?,,,,gradient boosting|XGBoost
+T36,test,unanswerable_near_miss,0,How does the k-nearest neighbors algorithm classify a new point?,,,,nearest neighbor|k-nearest|KNN
+T37,test,unanswerable_near_miss,0,What is L1 (lasso) regularization?,,,,lasso|regularization
+T38,test,unanswerable_near_miss,0,How do generative adversarial networks (GANs) create images?,,,,generative adversarial|GAN
+T39,test,unanswerable_logistics,0,When do the DSAI 3150 lab sections meet?,,,,lab section|lab sections
+T40,test,unanswerable_logistics,0,What is the last day to withdraw from DSAI 3150 with a W?,,,,withdraw from|with a W|withdrawal deadline
